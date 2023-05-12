@@ -4,7 +4,7 @@ ChatGPT clone using GPT4free Python library
 ## Installation
 1. Clone this repo, or just download the Python file directly.
 2. Install GPT4free Python library (in venv if you wish):
-```bash
+```shell
 pip3 install gpt4free
 ```
 
