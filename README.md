@@ -9,7 +9,7 @@ pip3 install gpt4free
 ```
 
 ## Running
-Execute the Python file using any method you wish (you may need to add execute permission on Unix systems). It just needs a console window for input/output.
+Execute the Python file using any method you wish (you may need to add execute permission on Unix systems). It just needs a console window for input/output. Press Ctrl+C or equivalent to exit at any time.
 
 ## Acknowledgements
 The code has been adapted from [PyPI's Example code](https://pypi.org/project/gpt4free/).
