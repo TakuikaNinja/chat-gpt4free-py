@@ -9,6 +9,7 @@ def signal_handler(sig, frame):
 
 chat = []
 signal.signal(signal.SIGINT, signal_handler) # setup signal handler to detect ^C
+print("\033c", end='') # OS-agonistic method to clear console
 while True:
     prompt = input("You: ")
     response = you.Completion.create(
