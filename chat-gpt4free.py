@@ -9,10 +9,14 @@ def signal_handler(sig, frame):
 
 chat = []
 signal.signal(signal.SIGINT, signal_handler)
+#string = "\u91ce"
+
+#print(string.encode('unicode-escape'))
 while True:
     prompt = input("You: ")
     response = you.Completion.create(
         prompt=prompt,
         chat=chat)
-    print("\nBot: {}\n".format(response.text))
+    # display output, making sure to decode the unicode escape sequences
+    print("\nBot: {}\n".format(response.text.encode().decode('unicode-escape')))
     chat.append({"question": prompt, "answer": response.text})
