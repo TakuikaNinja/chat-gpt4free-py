@@ -4,14 +4,14 @@ import sys
 from gpt4free import you
 
 def signal_handler(sig, frame):
+	"""
+	Detect ^C keystroke and exit gracefully.
+	"""
     print("\nExiting...")
     sys.exit(0)
 
 chat = []
-signal.signal(signal.SIGINT, signal_handler)
-#string = "\u91ce"
-
-#print(string.encode('unicode-escape'))
+signal.signal(signal.SIGINT, signal_handler) # setup signal handler
 while True:
     prompt = input("You: ")
     response = you.Completion.create(
