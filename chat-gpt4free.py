@@ -16,5 +16,5 @@ while True:
         prompt=prompt,
         chat=chat)
     # display output, making sure to decode the unicode escape sequences
-    print("\nBot: {}\n".format(response.text.encode().decode('unicode-escape')))
+    print(f"\nBot: {response.text.encode().decode('unicode-escape')}\n")
     chat.append({"question": prompt, "answer": response.text})
